@@ -61,6 +61,11 @@ Node* CreateListNode()
   return list_;
 }
 #endif
+void listInit(Node* head)
+{
+  assert(head);
+  head = NULL;
+}
 
 // 尾插
 void PushBack(Node** head, DataType data)
