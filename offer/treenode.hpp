@@ -68,23 +68,21 @@ void CreateBTree(pBTNode *Tree)
   }
 }
 
-BTNode* Create_1()
+void Create_1(pBTNode* pRoot)
 {
-  BTNode* node1 = BuyNode(1);
-  BTNode* node2 = BuyNode(2);
-  BTNode* node3 = BuyNode(3);
-  BTNode* node4 = BuyNode(4);
-  BTNode* node5 = BuyNode(5);
-  BTNode* node6 = BuyNode(6);
+  BTNode* node1 = BuyNode('1');
+  BTNode* node2 = BuyNode('2');
+  BTNode* node3 = BuyNode('3');
+  BTNode* node4 = BuyNode('4');
+  BTNode* node5 = BuyNode('5');
+  BTNode* node6 = BuyNode('6');
 
-  BTNode* pRoot = node1;
-  node1->left_ = node2;
-  node1->right_ = node3;
-  node2->left_ = node4;
-  node2->right_ = node5;
-  node3->left_ = node6;
-
-  return pRoot;
+  (*pRoot) = node4;
+  node4->left_ = node2;
+  node4->right_ = node5;
+  node2->left_ = node1;
+  node2->right_ = node3;
+  node5->right_ = node6;
 }
 
 BTNode* Create_2()
